@@ -13,7 +13,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $lastUpdatePricesDate = json_decode(Storage::get('schedule-updates.json'), true)['last_update'];
+        $lastUpdatePricesDate = json_decode(Storage::get('schedule-updates.json'), true)['last_update'] ?? null;
         $commandIsRunningNow = Cache::has('update-products:price-running');
         return view('products.index', [
             'lastUpdatePricesDate' => $lastUpdatePricesDate,

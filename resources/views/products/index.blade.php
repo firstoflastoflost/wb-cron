@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="text-center">Список товаров. Последнее обновление цен: {{$lastUpdatePricesDate}}</h3>
+    <h3 class="text-center">Список товаров. Последнее обновление цен: {{$lastUpdatePricesDate ?? 'не было'}}</h3>
     <h4>
         Обновление запущено в текущий момент:
         @if($commandIsRunningNow)
