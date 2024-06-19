@@ -42,6 +42,6 @@ class Product extends Model
 
     public function getUpdatedAtAttribute($attribute): string
     {
-        return Carbon::parse($attribute)->format('Y-m-d H:i:s');
+        return Carbon::parse($attribute)->setTimezone('Europe/Moscow')->format('Y-m-d H:i:s');
     }
 }
