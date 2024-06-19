@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/import', [PriceController::class, 'index']);
+Route::post('/upload-excel', [PriceController::class, 'start']);
+
+Route::get('products', [ProductController::class, 'index']);
+Route::get('getProducts', [ProductController::class, 'getProducts'])->name('products.getProducts');
