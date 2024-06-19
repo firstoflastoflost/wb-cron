@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Imports\ProductsImport;
+use App\Models\Product;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -24,6 +25,8 @@ class PriceController extends BaseController
         $request->validate([
             'file' => 'required|mimes:xlsx',
         ]);
+
+        Product::query()->delete();
 
         Excel::import(new ProductsImport, $request->file('file'));
 
