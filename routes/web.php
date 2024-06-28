@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('/import', [PriceController::class, 'index']);
 Route::post('/upload-excel', [PriceController::class, 'start']);
+Route::get('/get-file', [PriceController::class, 'getFile']);
+
+
 
 Route::get('products', [ProductController::class, 'index']);
 Route::get('getProducts', [ProductController::class, 'getProducts'])->name('products.getProducts');
