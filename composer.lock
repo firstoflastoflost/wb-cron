@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f1660dc4b4e596c06423b9f2f297010",
+    "content-hash": "9f89456a079936d1984a8ad5669cd7eb",
     "packages": [
+        {
+            "name": "andrey-tech/yclients-api-php",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andrey-tech/yclients-api-php.git",
+                "reference": "bf96ae0b59f9d37576beb1aee3369f99799e2d7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andrey-tech/yclients-api-php/zipball/bf96ae0b59f9d37576beb1aee3369f99799e2d7a",
+                "reference": "bf96ae0b59f9d37576beb1aee3369f99799e2d7a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yclients\\": "src/Yclients"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "andrey-tech",
+                    "homepage": "https://github.com/andrey-tech/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andrey Tyshev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Обертка для работы с API YCLIENTS v2.0 c троттлингом запросов и логированием в файл",
+            "homepage": "https://github.com/andrey-tech/yclients-api-php",
+            "keywords": [
+                "api",
+                "api-wrapper",
+                "logging",
+                "throttling",
+                "yclients"
+            ],
+            "support": {
+                "issues": "https://github.com/andrey-tech/yclients-api-php/issues",
+                "source": "https://github.com/andrey-tech/yclients-api-php/tree/1.8.0"
+            },
+            "time": "2024-05-09T05:36:39+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.2.0",
